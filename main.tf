@@ -82,6 +82,12 @@ resource "azurerm_storage_share" "volume1" {
   quota                = 50
 }
 
+resource "azurerm_storage_share_file" "site1" {
+  name             = "site1"
+  storage_share_id = azurerm_storage_share.volume1.id
+  source           = "site1.zip"
+}
+
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "my_terraform_vm" {

@@ -11,3 +11,7 @@ output "share" {
   value = azurerm_storage_share.volume1.url
 
 }
+
+output "sitefile" {
+  value = azurerm_storage_share_file.site1.storage_share_id
+}
