@@ -97,6 +97,11 @@ resource "azurerm_storage_share_file" "site1" {
   storage_share_id = azurerm_storage_share.volume1.id
   source           = "site1.zip"
 }
+resource "azurerm_storage_share_file" "site2" {
+  name             = "polymtl"
+  storage_share_id = azurerm_storage_share.volume1.id
+  source           = "polymtl.zip"
+}
 
 
 # Create virtual machine
