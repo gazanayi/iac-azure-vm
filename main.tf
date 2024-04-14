@@ -80,7 +80,7 @@ resource "azurerm_network_interface_security_group_association" "nsg" {
 
 # Create storage account for boot diagnostics
 resource "azurerm_storage_account" "my_storage_account" {
-  name                     = "strcr380volume"
+  name                     = "strcr380xvlume25"
   location                 = azurerm_resource_group.rg.location
   resource_group_name      = azurerm_resource_group.rg.name
   account_tier             = "Standard"
